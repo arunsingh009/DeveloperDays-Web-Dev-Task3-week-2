@@ -1,0 +1,25 @@
+<%- include("header") -%>
+    <div class="main">
+        <h1>My ToDo App</h1>
+        <div>
+            <form class="submit" action="/add" method="post">
+                <input type="text" placeholder="new task" name="n" />
+                <button type="submit"><strong>ADD</strong></button>
+            </form>
+            <div class="tasksBoard">
+                <% newListItems.forEach(function(item){ %>
+                    <form action="/delete" method="post">
+                        <ul>
+                            <li>
+                                <input value="<%= item._id %>" type="checkbox" name="checkbox" onChange="this.form.submit()" />
+                                <label><%= item.name %></label>
+                            </li>
+                        </ul>
+                    </form>
+                    <% }); %>
+                        <form action="/deleteAll" method="post">
+                            <button id="clear" type="submit">Clear</button>
+                        </form>
+            </div>
+        </div>
+    </div>

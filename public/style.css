@@ -1,0 +1,83 @@
+html {
+    height: 100%;
+    background-image: linear-gradient( to right, #222831, #3f5783);
+    font-family: sans-serif;
+    color: #00adb5;
+    background-size: auto;
+}
+
+.main {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.submit {
+    background-color: #c5c0c0;
+    padding: 15px;
+}
+
+input[type="text"] {
+    width: 310px;
+    height: 30px;
+    outline: 0;
+    border: none;
+    font-size: 1.5em;
+    background: #eeeeee;
+    color: #222831;
+}
+
+button {
+    font-size: 1.5em;
+    color: #da2303;
+    background-color: #eeeeee;
+    outline: 0;
+    border: none;
+    width: 50px;
+}
+
+.tasksBoard {
+    background-color: #eeeeee;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    border-bottom: 1px solid #00adb5;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 1.3em;
+    color: #222831;
+}
+
+#clear {
+    float: right;
+    text-align: right;
+    color: #00adb5;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .main {
+        margin: auto;
+        width: 100%;
+    }
+    input[type="text"] {
+        width: 80%;
+    }
+    button {
+        width: 10%;
+    }
+}
